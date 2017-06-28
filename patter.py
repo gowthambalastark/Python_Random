@@ -31,6 +31,6 @@ for i in range(5):
     j=0
     s=t
     t=""
-    print(s)
+    print(s[::-1])
         
                 
