@@ -1,7 +1,7 @@
 '''
 printing odd star pattern:
 
-n=3:
+n=5:
 
           *           
         * * *         
