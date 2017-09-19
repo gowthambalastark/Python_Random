@@ -1,0 +1,39 @@
+'''
+Given two strings in lowercase, your task is to find minimum number of manipulations required to make two strings anagram without deleting any character. If two strings contains same data set in any order then strings are called Anagrams.
+
+Input : 
+       s1 = "aba"
+       s2 = "baa"
+Output : 0
+Explanation: Both String contains identical characters
+
+Input :
+       s1 = "ddcf"
+       s2 = "cedk"
+Output : 2
+Explanation : Here, we need to change two characters
+in either of the strings to make them identical. We 
+can change 'd' and 'f' in s1 or 'e' and 'k' in s2.
+
+'''
+#code
+
+for i in range(int(input())):
+    n=int(input())
+    n,m=map(str,input().split())
+    d,c={},0
+    for j in n:
+        try:
+            d[j]+=1
+        except:
+            d[j]=1
+    for k in m:
+        try:
+            if d[k]>0:
+                d[k]-=1
+            else:
+                del d[k]
+                c+=1
+        except:
+            c+=1
+    print(c)
